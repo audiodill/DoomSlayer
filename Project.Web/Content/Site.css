@@ -35,3 +35,9 @@ img{
     margin: 5% 20%;
     padding: 5% 20%;
 }
+
+.gold{
+    max-width: 20px;
+    height: auto;
+    margin: 2px;
+}

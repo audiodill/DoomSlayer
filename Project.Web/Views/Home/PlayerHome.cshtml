@@ -1,9 +1,20 @@
-﻿@model Project.Web.Models.PlayerModel
+﻿@using Project.Web.Models;
+@model PlayerModel
 
 @{
     ViewBag.Title = "PlayerHome";
     Layout = "~/Views/Shared/Main_Layout .cshtml";
 }
 
-<h2>PlayerHome</h2>
+<h2>@Model.Name</h2>
 
+<div>
+    <img src="@Url.Content("~/Content/img/Characters/" + Model.ImageName)"  />
+</div>
+
+<div class="attributes">
+    <p>Life: @Model.Life</p>
+    <p><img src="~/Content/img/Misc/Gold.jpg"/ class="gold"> @Model.Gold Gold</p>
+    <p>XP: @Model.XP</p>
+    <p>Level: @Model.XpLevel</p>
+</div>

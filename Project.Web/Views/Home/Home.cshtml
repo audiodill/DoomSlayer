@@ -1,0 +1,22 @@
+﻿@model Project.Web.Models.PlayerModel
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/Main_Layout .cshtml";
+}
+<div class="text-center">
+    <h2>Doom Slayer</h2>
+    <div class="container login" style="background-color: lightgray">
+        <form action="@Url.Action("PlayerHome", "Home")" method="get">
+            <div>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+            <button>Login</button>
+        </form>
+
+        <form action="@Url.Action("CreatePlayer", "Home")" method="get">
+            <button>Create New Player</button>
+        </form>
+    </div>
+</div>

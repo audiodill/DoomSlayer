@@ -1,0 +1,26 @@
+﻿@using Project.Web.Models;
+@model PlayerModel
+
+@{
+    ViewBag.Title = "CreatePlayer";
+    Layout = "~/Views/Shared/Main_Layout .cshtml";
+}
+
+<h2>Create Player</h2>
+
+<form action="@Url.Action("CreatePlayer", "Home")" method="post">
+    <div>
+        @Html.LabelFor(m => m.Name);
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.PlayerType)
+        @Html.DropDownListFor(m => m.PlayerType, PlayerModel.PlayerTypes)
+    </div>
+    <div>
+        @Html.RadioButtonFor(m => m.Gender, "M", false) Male
+        @Html.RadioButtonFor(m => m.Gender, "F", false) Female
+    </div>
+    <button>Create Player</button>
+</form>
+
